@@ -1,18 +1,33 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+    <BaseButton v-model="textValue" @click="Fire" label="Big fucking BUTTON" :isLoading="loading"></BaseButton>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import BaseButton from '@/components/BaseButton.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    HelloWorld,
+    BaseButton
+  },
+  data: () => ({
+    textValue: 'Nacisnij mnie',
+    loading: false
+  }),
+  methods: {
+    Fire() {
+      console.log("fire");
+      setTimeout(()=>{
+        this.loading = false
+      }, 3000);
+      this.loading = true;
+    }
   }
 }
 </script>

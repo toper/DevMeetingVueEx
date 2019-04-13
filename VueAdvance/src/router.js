@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Vote from './views/Vote.vue'
 import Score from './views/Score.vue'
-import Setting from './views/Setting.vue'
 
 Vue.use(Router)
 
