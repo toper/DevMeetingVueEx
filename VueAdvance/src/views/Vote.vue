@@ -1,5 +1,5 @@
 <template>
-  <div class="home">Vote</div>
+  <div class="vote">Vote</div>
 </template>
 
 <script>
@@ -7,9 +7,6 @@
 //import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: "vote",
-  components: {
-    //  HelloWorld
-  }
+  name: "vote"
 };
 </script>
