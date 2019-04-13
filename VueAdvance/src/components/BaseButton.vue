@@ -1,6 +1,8 @@
 <template>
     <label>{{label}}
-        <button :disabled="isLoading" v-bind="$attrs" v-on="$listeners">{{value}}</button>
+        <button :disabled="isLoading" v-bind="$attrs" v-on="$listeners">
+            <slot></slot>
+        </button>
     </label>
 </template>
 

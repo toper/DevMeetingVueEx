@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     
-    <BaseButton v-model="textValue" @click="Fire" label="Big fucking BUTTON" :isLoading="loading"></BaseButton>
+    <BaseButton @click="Fire" label="Big fucking BUTTON" :isLoading="loading">
+      {{textValue}}
+    </BaseButton>
   </div>
 </template>
 
