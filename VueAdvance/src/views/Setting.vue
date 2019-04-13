@@ -4,12 +4,23 @@
 
 <script>
 // @ is an alias to /src
-//import HelloWorld from '@/components/HelloWorld.vue'
+import store from '../store.js'
 
 export default {
   name: "setting",
   components: {
     //  HelloWorld
-  }
+  },
+  beforeRouteEnter(to, from, next) {
+    console.log('Restriction area', to);
+    if (store.isAdmin) { 
+        console.log("Witamy");
+    }
+    else {
+        next({
+            path: '/',
+        });
+    }
+  },
 };
 </script>

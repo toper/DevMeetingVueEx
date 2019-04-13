@@ -24,7 +24,8 @@ export default new Router({
   {
     path: '/vote',
     name: 'vote',
-    component: Vote
+    component: Vote,
+    beforeEnter: MyGuard
   },
   {
     path: '/score',
@@ -34,7 +35,14 @@ export default new Router({
   {
     path: '/setting',
     name: 'setting',
-    component: Setting
+    component: () => import('@/views/Setting.vue')
   }
   ]
 })
+
+function MyGuard (to, from, next) {
+  console.log(to, from)
+  next({
+    path: '/'
+  })
+};
